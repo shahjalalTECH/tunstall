@@ -6,6 +6,10 @@ body {
   font-family: Source Sans Pro;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .Footer-inner {
   max-width: 1200px;
   margin-left: auto;
@@ -198,7 +202,7 @@ body {
 .custom-container {
   max-width: 1200px;
   margin: 15px auto;
-  padding: 30px 0px;
+  padding: 30px;
 }
 
 /* desc section */
@@ -783,8 +787,239 @@ body {
 
 /*=========== New code add ===============*/
 /*=========== Style By Shah Jalal ===============*/
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+/*============== Why Choose Us ===============*/
 
-h2 {
+:root {
+  --red-color: #ed1d2a;
+  --second-color: #3d4d5a;
+  --main-font: Source Sans Pro;
+}
+
+.tunstall-features-main-parent h2,
+.tunstall-why-choose-us-main-parent h2 {
   font-family: 'Space Grotesk', sans-serif;
+  text-align: center;
+  font-size: 30px;
+  font-family: Source Sans Pro;
+  text-transform: uppercase;
+}
+
+.tunstall-why-choose-us {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.tunstall-why-choose-us-item {
+  width: calc(50% - 5px);
+  margin-top: 10px;
+  background: #eee;
+  padding: 20px;
+}
+
+.tunstall-why-choose-us-item i {
+  font-size: 50px;
+  color: var(--red-color);
+  text-align: center;
+  display: block;
+}
+
+.tunstall-why-choose-us-item h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-bottom: 0;
+  font-family: var(--main-font);
+}
+
+.tunstall-why-choose-us-item p {
+  font-size: 16px;
+  font-family: var(--main-font);
+  text-align: center;
+}
+
+@media screen and (max-width: 576px) {
+  .tunstall-why-choose-us-item {
+    width: 100%;
+  }
+
+  .tunstall-why-choose-us-item h3 {
+    font-size: 16px;
+  }
+}
+
+/*============== Features Section ===============*/
+
+.tunstall-features {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tunstall-features-items {
+  width: calc(30% - 20px);
+}
+
+.tunstall-features-big-product {
+  width: calc(40% - 20px);
+  display: flex;
+  justify-content: center;
+}
+
+.tunstall-features-big-product img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.tunstall-features-item {
+  margin-bottom: 50px;
+}
+
+.tunstall-features-item i {
+  font-size: 30px;
+  color: var(--red-color);
+  display: block;
+}
+
+.tunstall-features-item h3 {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.tunstall-features-item p {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.tunstall-features-items-last .tunstall-features-item i,
+.tunstall-features-items-last .tunstall-features-item h3,
+.tunstall-features-items-last .tunstall-features-item p {
+  text-align: right;
+}
+
+.tunstall-our-track-record h2,
+.tunstall-features-main-parent h2,
+.tunstall-why-choose-us-main-parent h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  text-align: center;
+  font-size: 30px;
+  font-family: Source Sans Pro;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+@media screen and (max-width: 768px) {
+
+  .tunstall-features-items-last .tunstall-features-item i,
+  .tunstall-features-items-last .tunstall-features-item h3,
+  .tunstall-features-items-last .tunstall-features-item p {
+    text-align: left;
+  }
+
+  .tunstall-our-track-record h2,
+  .tunstall-features-main-parent h2,
+  .tunstall-why-choose-us-main-parent h2 {
+    font-size: 20px;
+  }
+
+  .tunstall-features-item h3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 16px;
+  }
+
+  .tunstall-features-item p {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .tunstall-features {
+    flex-direction: column;
+  }
+
+  .tunstall-features-items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .tunstall-features-big-product {
+    width: 60%;
+    align-self: center;
+    margin-bottom: 50px;
+  }
+
+  .tunstall-features-items {
+    width: 100%;
+  }
+
+  .tunstall-features-item {
+    width: calc(33.33% - 15px);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .tunstall-features-item {
+    width: calc(100% - 15px);
+  }
+
+  .tunstall-features-items {
+    flex-wrap: wrap;
+  }
+
+  .tunstall-features-big-product {
+    width: 80%;
+    margin-bottom: 50px;
+  }
+
+  .tunstall-features-items-last .tunstall-features-item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/*============== Our Track Record ===============*/
+
+.tunstall-our-track-record-parent {
+  display: flex;
+  flex-wrap: wrap;
+  background: #eee;
+  padding: 10px;
+  justify-content: center;
+}
+
+.tunstall-our-track-record-item {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  background: #eee;
+  padding: 10px 10px;
+}
+
+.tunstall-our-track-record-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
+  .tunstall-our-track-record-item {
+    width: 33.33%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .tunstall-our-track-record-parent {
+    padding: 5px;
+  }
+
+  .tunstall-our-track-record-item {
+    width: 50%;
+    padding: 5px 5px;
+  }
 }
